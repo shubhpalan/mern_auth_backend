@@ -34,7 +34,7 @@ const login = async (req,res) =>{
         const passCheck = await bcrypt.compareSync(password,user.password);
         if(!passCheck){
             return res.json({
-                success:true,
+                success:false,
                 message:"Incorrect Password"
             });
         }
